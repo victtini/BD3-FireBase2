@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bd3-firebase</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>WEB APP LIBRE - FIREBASE: FIRESTORE</h1>
+    <div class="content">
+        <form id="add-book-form">
+            <input type="text" name="autor" placeholder="Nome do autor">
+            <input type="text" name="titulo" placeholder="Título do livro">
+            <button>cadastrar</button>
+        </form>
+        <ul id="book-list"></ul>
+    </div>
+</body>
+
+    <!-- IMPORT DO SDK DO FIREBASE --> 
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script> 
+
+
+    <!-- IMPORT DO SDK DO FIRESTORE --> 
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script> 
+
+    <!-- CONEXÃO COM FIREBASE -->
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyC2iQbmFdFUREgm9pPOo7u4DaY_nRyjCA0",
+            authDomain: "b3d-app-libre-victor.firebaseapp.com",
+            projectId: "b3d-app-libre-victor",
+            storageBucket: "b3d-app-libre-victor.appspot.com",
+            messagingSenderId: "785594721415",
+            appId: "1:785594721415:web:e70ddf726e615ea4874422",
+            measurementId: "G-TMY5238Q2T"
+          };
+          /*Inicializa o FIREBASE*/
+          firebase.initializeApp(firebaseConfig);
+
+          /*Inicializa o FIRESTORE*/
+          const db = firebase.firestore();
+          console.log(db);
+
+    </script>
+
+    <!-- IMPORTAÇÃO DO ARQUIVO app.js -->
+    <script src="app.js"></script>
+</html>
